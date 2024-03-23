@@ -1,0 +1,15 @@
+---
+import Avatar from "./Avatar.astro";
+const { text, description } = Astro.props;
+---
+
+<article class="rounded-lg hover:bg-slate-100 group flex items-center p-3 cursor-pointer">
+  <div class="grow flex gap-3">
+    <Avatar />
+    <div>
+      <h3 class="text-slate-700 font-semibold">{text}</h3>
+      <p class="text-slate-400 text-sm">{description}</p>
+    </div>
+  </div>
+  <svg class="group-hover:stroke-purple-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" d="M3 12.013L20.789 12m-6.776 7L21 12l-6.988-7"></path></svg>
+</article>
