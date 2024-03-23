@@ -1,0 +1,16 @@
+---
+import Avatar from "./Avatar.astro";
+import Button from "./Button.astro";
+const { member } = Astro.props;
+---
+
+<li class="flex py-3 justify-between border-t">
+  <div class="flex gap-3 items-center">
+    <Avatar imgPath={member.imgPath} imgAlt={member.imgAlt} />
+    <div class="w-full">
+      <p class="text-gray-800 text-sm">{member.name}</p>
+      <p class="text-gray-500 text-sm">{member.role}</p>
+    </div>
+  </div>
+  <Button text="+ Invite" />
+</li>

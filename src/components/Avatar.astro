@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+import Lindsay from "../assets/profile_lindsay.avif";
+import Courtney from "../assets/profile_courtney.avif";
+import Tom from "../assets/profile_tom.avif";
+const { imgPath, imgAlt } = Astro.props;
+---
+
+<Image class="object-cover rounded-full" width="40" height="40" src={imgPath} alt={imgAlt} />

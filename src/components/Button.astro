@@ -1,0 +1,11 @@
+---
+const { variant, text } = Astro.props;
+const variants = {
+  primary: "bg-indigo-600 text-gray-100 p-2.5 rounded-lg hover:bg-indigo-500",
+  secondary: "he",
+};
+
+const classes = `text-sm font-medium  ${variants[variant]} || ""`;
+---
+
+<button class={classes}>{text}</button>

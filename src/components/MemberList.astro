@@ -1,0 +1,31 @@
+---
+import MemberCard from "./MemberCard.astro";
+const members = [
+  {
+    id: 1,
+    name: "Lindsay Walton",
+    role: "Front-end Developer",
+    imgPath: "/src/assets/profile_lindsay.avif",
+    imgAlt: "Picture of Lindsay",
+  },
+  { id: 2, name: "Courtney Henry", role: "Designer", imgPath: "/src/assets/profile_courtney.avif", imgAlt: "Picture of Courtney" },
+  {
+    id: 3,
+    name: "Tom Cook",
+    role: "Director of Product",
+    imgPath: "/src/assets/profile_tom.avif",
+    imgAlt: "Picture of Tom",
+  },
+];
+---
+
+<section class="max-w-lg mx-auto px-2">
+  <h3 class="text-gray-500 mb-5">Team members previously added to projects</h3>
+  <ul class="border-b">
+    {
+      members.map((member) => {
+        return <MemberCard member={member} />;
+      })
+    }
+  </ul>
+</section>
